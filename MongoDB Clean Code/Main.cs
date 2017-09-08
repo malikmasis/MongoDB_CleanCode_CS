@@ -3,13 +3,14 @@ using System;
 using System.Windows.Forms;
 using MongoDB.Bson;
 using System.Threading.Tasks;
+using NSubstitute;
 
 namespace MongoDB_Clean_Code
 {
 
     public partial class Main : Form
     {
-        MongoClient client=null;
+        MongoClient client = null;
         public Main()
         {
             InitializeComponent();
@@ -53,7 +54,18 @@ namespace MongoDB_Clean_Code
 
         private void btnClean_Click(object sender, EventArgs e)
         {
+
+
+            //var mockObject = Substitute.For<Person>();
+
+            //mockObject.Sum(Arg.Any<int>(), Arg.Any<int>())
+            //.Returns(10);
+            // var bb = mockObject.Chan(txtName.Text, txtSurName.Text)
+            //.Returns("ab");
+            // mockObject.lastname.Returns("firstname");
             Clean();
+
+
         }
 
         private void btnShow_Click(object sender, EventArgs e)
